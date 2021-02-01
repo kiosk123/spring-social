@@ -8,3 +8,5 @@
  */
 
 rootProject.name = 'spring-social'
+
+include 'project-01'
