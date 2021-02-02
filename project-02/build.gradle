@@ -1,0 +1,16 @@
+plugins {
+    id 'war'
+    id 'org.gretty' version '3.0.3' 
+}
+
+gretty {
+    httpPort = 8080
+    managedClassReload = true
+}
+
+dependencies {
+    implementation "org.springframework.social:spring-social-config:1.1.6.RELEASE"
+    implementation "org.springframework.social:spring-social-twitter:1.1.2.RELEASE"
+    implementation "javax.servlet:jstl:1.2"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.3"
+}
