@@ -17,7 +17,7 @@ public class TwitterController {
 
     @Autowired
     public TwitterController(ConnectionRepository repository) {
-        this.repository=repository;
+        this.repository = repository;
     }
 
     @RequestMapping(value="/profile", method= RequestMethod.GET)

@@ -39,6 +39,11 @@ public class SocialConfig extends SocialConfigurerAdapter {
                             env.getRequiredProperty("twitter.appSecret")));
         }
 
+        /**
+         * @Bean 스코프 필수
+         * request마다 빈 생성 요청때마다 유저는 달라질 수 있으며 접속하는 트위터 계정도 달라지기 때문
+         * connectionRepository는 현재 유저 ID에 따라 정해지며 UserIdSource를 이용해 정보를 가져온다
+         */
         @Bean
         @Scope(value = "request", proxyMode = ScopedProxyMode.INTERFACES)
         public Twitter twitterTemplate(ConnectionRepository connectionRepository) {
